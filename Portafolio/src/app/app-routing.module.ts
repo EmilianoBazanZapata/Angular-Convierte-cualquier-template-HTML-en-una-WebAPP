@@ -9,13 +9,13 @@ import { DocumentationComponent } from './Components/documentation/documentation
 
 const routes: Routes = [
   //la primer ruta que mostrare sera la del portafolio 
-  {path:'',component:PortafolioComponent},
+  {path:'home',component:PortafolioComponent},
   {path:'about',component:AboutComponent},
   {path:'blog',component:BlogComponent},
   {path:'contact',component:ContactUsComponent},
   {path:'item',component:ItemComponent},
   {path:'documentation',component:DocumentationComponent},
-  {path:'**',redirectTo:'', pathMatch:'full'}
+  {path:'**',redirectTo:'home', pathMatch:'full'}
 ];
 
 @NgModule({
