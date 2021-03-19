@@ -5,6 +5,7 @@ import { AboutComponent } from './Components/about/about.component';
 import { ItemComponent } from './Components/item/item.component';
 import { BlogComponent } from './Components/blog/blog.component';
 import { ContactUsComponent } from './Components/contact-us/contact-us.component';
+import { DocumentationComponent } from './Components/documentation/documentation.component';
 
 const routes: Routes = [
   //la primer ruta que mostrare sera la del portafolio 
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path:'blog',component:BlogComponent},
   {path:'contact',component:ContactUsComponent},
   {path:'item',component:ItemComponent},
+  {path:'documentation',component:DocumentationComponent},
   {path:'**',redirectTo:'', pathMatch:'full'}
 ];
 
