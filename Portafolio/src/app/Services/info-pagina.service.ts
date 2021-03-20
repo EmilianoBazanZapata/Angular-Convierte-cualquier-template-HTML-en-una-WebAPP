@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
 import { InfoPagina } from '../Interfaces/InfoPagina.interface';
 
 @Injectable({
@@ -9,9 +8,11 @@ import { InfoPagina } from '../Interfaces/InfoPagina.interface';
 export class InfoPaginaService {
 
   info: InfoPagina = {};
+  equipo:any[]=[];
 
   constructor(private http: HttpClient) {
     this.GetInformacion();
+    this.CargarEquipo();
   };
 
   GetInformacion() {
@@ -23,5 +24,13 @@ export class InfoPaginaService {
         });
   }
 
+  private CargarEquipo()
+  {
+    this.http.get('https://angular-html-7f06f-default-rtdb.firebaseio.com/equipo.json')
+    .subscribe((data:any[]) =>{
+      this.equipo = data;
+      console.log(this.equipo);
+    })
 
+  }
 }
