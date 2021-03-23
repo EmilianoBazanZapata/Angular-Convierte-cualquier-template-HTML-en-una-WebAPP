@@ -13,7 +13,7 @@ const routes: Routes = [
   {path:'about',component:AboutComponent},
   {path:'blog',component:BlogComponent},
   {path:'contact',component:ContactUsComponent},
-  {path:'item',component:ItemComponent},
+  {path:'item/:id',component:ItemComponent},
   {path:'documentation',component:DocumentationComponent},
   {path:'**',redirectTo:'home', pathMatch:'full'}
 ];

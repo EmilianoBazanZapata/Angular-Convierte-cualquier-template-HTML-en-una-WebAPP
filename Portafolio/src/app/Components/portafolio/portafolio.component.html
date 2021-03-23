@@ -5,7 +5,7 @@
     </div>
     <div *ngIf="!_ProductoService.cargando" class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4">
 
-        <a *ngFor="let producto of _ProductoService.productos" routerLink="/item" class="rk-item ae-masonry__item">
+        <a *ngFor="let producto of _ProductoService.productos" [routerLink]="['/item',producto.cod]" class="rk-item ae-masonry__item">
             <img src="assets/productos/{{producto.url}}.jpg">
             <div class="item-meta">
                 <h2>{{producto.titulo}}</h2>
