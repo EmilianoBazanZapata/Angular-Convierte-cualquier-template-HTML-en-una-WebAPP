@@ -13,6 +13,8 @@ export class ItemComponent implements OnInit {
   constructor(private route:ActivatedRoute , 
               private _ProductoService:ProductosService) { }
 
+  producto:ProductoDescripcion;
+  id:string;
   cargando = true;
   ngOnInit(): void 
   {
@@ -22,7 +24,9 @@ export class ItemComponent implements OnInit {
           {
             setTimeout(() => {
               this.cargando = false;
+              this.id = parametros['id'];
               console.log(data);
+              this.producto = data;
             }, 3000);
           });
       });
