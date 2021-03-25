@@ -25,7 +25,6 @@ export class ItemComponent implements OnInit {
             setTimeout(() => {
               this.cargando = false;
               this.id = parametros['id'];
-              console.log(data);
               this.producto = data;
             }, 3000);
           });

@@ -13,6 +13,7 @@ import { ItemComponent } from './Components/item/item.component';
 import { BlogComponent } from './Components/blog/blog.component';
 import { ContactUsComponent } from './Components/contact-us/contact-us.component';
 import { DocumentationComponent } from './Components/documentation/documentation.component';
+import { SearchComponent } from './Components/search/search.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { DocumentationComponent } from './Components/documentation/documentation
     ItemComponent,
     BlogComponent,
     ContactUsComponent,
-    DocumentationComponent
+    DocumentationComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
