@@ -16,9 +16,7 @@ export class SearchComponent implements OnInit {
   {
     this.route.params.subscribe(data=>
       {
-        console.log(data['termino']);
-        
-        this._productoservice.BuscarProducto(data['termino']);
+        this._productoservice.buscarProducto(data['termino']);
       })
   }
 
