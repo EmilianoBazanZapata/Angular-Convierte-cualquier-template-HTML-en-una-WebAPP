@@ -3,7 +3,10 @@
     <div class="double-bounce2"></div>
 </div>
 <div *ngIf="!cargando">
-    <header class="rk-portfolio-cover  item-inside-1">
+    <header>
+        <div [ngStyle]="{'background-image': 'url(assets/productos/prod-6/main.jpg)'}" class="rk-portfolio-cover  item-inside-1">
+
+        </div>
         <div class="item-inside__meta">
             <h1 class="ae-u-bolder rk-portfolio-title ">{{producto?.producto}}</h1>
             <p class="ae-theta rk-portfolio-category ">{{producto?.categoria}}</p>
